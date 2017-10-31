@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Picker" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorControlNormal">#FFFF</item>
+        <item name="android:textColorPrimary">#FFFF</item>
+    </style>
+
 </resources>

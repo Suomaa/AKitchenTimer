@@ -9,8 +9,42 @@
     android:background="@color/colorBackground"
     android:keepScreenOn="true">
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/timePickerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/textTimer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <NumberPicker
+            android:id="@+id/hoursPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="@id/minutesPicker"
+            android:theme="@style/AppTheme.Picker"/>
+
+        <NumberPicker
+            android:id="@+id/minutesPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/hoursPicker"
+            app:layout_constraintRight_toLeftOf="@id/secondsPicker"
+            android:theme="@style/AppTheme.Picker"/>
+
+
+        <NumberPicker
+            android:id="@+id/secondsPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/minutesPicker"
+            android:theme="@style/AppTheme.Picker"/>
+
+    </android.support.constraint.ConstraintLayout>
+
     <TextView
-        android:id="@+id/text_timer"
+        android:id="@+id/textTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20pt"
@@ -18,6 +52,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/timePickerLayout"/>
+
+
+
 
 </android.support.constraint.ConstraintLayout>
