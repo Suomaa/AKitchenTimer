@@ -54,7 +54,18 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/timePickerLayout"/>
 
-
+    <ImageView
+        android:id="@+id/imageButtonStart"
+        android:contentDescription="A start timer button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/ic_play_white_24dp"
+        android:background="@color/colorBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textTimer"
+        android:onClick="clickButtonStart"/>
 
 
 </android.support.constraint.ConstraintLayout>
